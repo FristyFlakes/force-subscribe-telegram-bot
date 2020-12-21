@@ -49,7 +49,7 @@ def _check_member(client, message):
         client.get_chat_member(channel, user_id)
       except UserNotParticipant:
         try:
-          channel = chat_db.channel
+          #channel = chat_db.channel
           sent_message = message.reply_text(
               "{}, You Are **Not Subscribed** To My [CHANNEL 📢](https://t.me/{}) Yet.\n\nPlease [JOIN](https://t.me/{}) & **Press The Button Below** to unmute yourself.".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
